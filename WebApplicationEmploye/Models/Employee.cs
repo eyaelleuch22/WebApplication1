@@ -4,16 +4,12 @@ namespace WebApplication1.Models
 {
     public class Employee
     {
-        public int Id { get; set; }
-
-        [Required]
-        [StringLength(10,ErrorMessage ="Taille Max 10")]
+        public int Id { get; set; } 
+        [Required,StringLength(50,ErrorMessage ="Taille max 10 caracteres")]
         public string Name { get; set; }
-
-        [Required] 
+        [Required]
         public string Departement { get; set; }
-
-        [Range(200,5000)]
+        [Range(1000, 5000)]
         public int Salary { get; set; }
     }
 }

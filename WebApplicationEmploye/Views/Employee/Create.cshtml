@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<WebApplication1.Models.Employee>
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Details</h1>
+<h1>Create</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -42,11 +42,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Salary)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
+                </td>
         </tr>
 }
     </tbody>
